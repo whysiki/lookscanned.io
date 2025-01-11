@@ -1,8 +1,10 @@
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import IndexView from '@/views/IndexView.vue'
-
+// @/ 是为了简化文件路径引用，指向 src 目录，避免过长的相对路径。
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  // 使用哈希模式的路由历史
+  // history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
